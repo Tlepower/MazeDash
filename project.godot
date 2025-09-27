@@ -11,10 +11,9 @@ config_version=5
 [application]
 
 config/name="MazeDash"
-run/main_scene="uid://fil706e2trux"
+run/main_scene="uid://crkfitlbtdwhl"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
-<<<<<<<Updatedupstream<<<<<<<Updatedupstreamrun/main_scene="uid://fil706e2trux"
 
 [input]
 

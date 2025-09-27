@@ -10,7 +10,7 @@ func _process(delta):
 
 
 func _on_play_button_pressed() -> void:
-	print("Play")
+	get_tree().change_scene_to_file("res://Scenes/Levels/level.tscn")
 
 
 func _on_controls_button_pressed() -> void:
