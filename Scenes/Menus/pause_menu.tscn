@@ -61,16 +61,18 @@ material = SubResource("ShaderMaterial_bpi0q")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.00086805556
+anchor_top = 0.0015432099
 anchor_right = -0.00086805556
+anchor_bottom = 0.0015432099
 offset_right = 1147.0
 offset_bottom = 646.0
 metadata/_edit_use_anchors_ = true
 
 [node name="PanelContainer2" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_left = 228.0
-offset_top = 113.0
-offset_right = 859.0
+offset_left = 250.0
+offset_top = 112.0
+offset_right = 917.0
 offset_bottom = 536.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2"]
