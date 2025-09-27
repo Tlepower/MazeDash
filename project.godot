@@ -12,7 +12,10 @@ config_version=5
 
 config/name="MazeDash"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 run/main_scene="uid://fil706e2trux"
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 config/features=PackedStringArray("4.5", "Forward Plus")
