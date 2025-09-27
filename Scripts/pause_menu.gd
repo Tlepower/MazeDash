@@ -30,7 +30,4 @@ func _on_quit_pressed():
 func _process(delta):
 	testEsc()
 
-func _on_restart_pressed():
-	resume()
-	get_tree().reload_current_scene()
 	
