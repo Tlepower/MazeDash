@@ -1,4 +1,36 @@
-[gd_scene format=3 uid="uid://crkfitlbtdwhl"]
+[gd_scene load_steps=9 format=3 uid="uid://crkfitlbtdwhl"]
+
+[ext_resource type="FontFile" uid="uid://d0klfy24g11oc" path="res://Assets/Fonts/pixellari/Pixellari.ttf" id="1_n6o43"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pxni"]
+bg_color = Color(0.11119685, 0.11119685, 0.11119678, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71mqo"]
+bg_color = Color(0.71926206, 0.56993985, 0.39602843, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlmu3"]
+bg_color = Color(0.15071034, 0.08990336, 0.0068924436, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6o43"]
+bg_color = Color(0.70291203, 0.47261566, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_71mqo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n6o43"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dlmu3"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -9,6 +41,36 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6pxni")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -265.0
+offset_top = 24.0
+offset_right = 265.0
+offset_bottom = 172.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.37729463, 0.15583605, 0.026722986, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("1_n6o43")
+theme_override_font_sizes/font_size = 110
+text = "Maze Dash"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -17,28 +79,44 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -357.625
-offset_top = -175.25
+offset_top = -127.0
 offset_right = 357.625
-offset_bottom = 175.25
+offset_bottom = 223.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
+metadata/_edit_lock_ = true
 
 [node name="Play_Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/outline_size = 0
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_71mqo")
 text = "Play"
+metadata/_edit_lock_ = true
 
 [node name="Controls_Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n6o43")
 text = "Controls"
+metadata/_edit_lock_ = true
 
 [node name="Shop_Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dlmu3")
 text = "Shop"
+metadata/_edit_lock_ = true
