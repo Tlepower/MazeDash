@@ -1,4 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://crkfitlbtdwhl"]
+[gd_scene load_steps=9 format=3 uid="uid://crkfitlbtdwhl"]
+
+[ext_resource type="FontFile" uid="uid://d0klfy24g11oc" path="res://Assets/Fonts/pixellari/Pixellari.ttf" id="1_n6o43"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pxni"]
 bg_color = Color(0.11119685, 0.11119685, 0.11119678, 1)
@@ -39,23 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
 
-[node name="TextureRect" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -237.5
-offset_top = 8.0
-offset_right = 237.5
-offset_bottom = 156.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 70
-text = "Maze Dash"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Panel" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -63,6 +49,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6pxni")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -265.0
+offset_top = 24.0
+offset_right = 265.0
+offset_bottom = 172.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.37729463, 0.15583605, 0.026722986, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("1_n6o43")
+theme_override_font_sizes/font_size = 110
+text = "Maze Dash"
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_lock_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -79,6 +85,7 @@ offset_bottom = 223.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
+metadata/_edit_lock_ = true
 
 [node name="Play_Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
