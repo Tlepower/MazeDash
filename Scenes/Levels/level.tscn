@@ -13,13 +13,7 @@ position = Vector2(973, 171)
 position = Vector2(530, 169)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
-follow_viewport_scale = 0.001
 
 [node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("3_yjxcc")]
-anchors_preset = -1
-anchor_bottom = 1.006
-offset_left = 11147.999
-offset_top = 8999.999
-offset_right = 97847.99
-offset_bottom = 157348.1
+offset_top = 2.0
+offset_bottom = 2.0
