@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://6xpebjbdcl1x"]
+
+[ext_resource type="Script" uid="uid://we4hgfnqv76s" path="res://Scripts/pause_menu.gd" id="1_k0w1u"]
+[ext_resource type="Shader" uid="uid://ch4liahm7iia0" path="res://Assets/Sprites/pause_menu.gdshader" id="2_1och7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bpi0q"]
+shader = ExtResource("2_1och7")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_myy0f"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vmyb1"]
+resource_name = "blur"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sjs17"]
+_data = {
+&"RESET": SubResource("Animation_myy0f"),
+&"blur": SubResource("Animation_vmyb1")
+}
+
+[node name="Pause Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k0w1u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_bpi0q")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00086805556
+anchor_right = -0.00086805556
+offset_right = 1147.0
+offset_bottom = 646.0
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 113.0
+offset_right = 859.0
+offset_bottom = 536.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Quit" type="Button" parent="PanelContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="Resume" type="Button" parent="PanelContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Restart" type="Button" parent="PanelContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
+[node name="Controls" type="Button" parent="PanelContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_sjs17")
+}
+
+[connection signal="pressed" from="PanelContainer2/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="PanelContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PanelContainer2/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer2/VBoxContainer/Controls" to="." method="_on_controls_pressed"]

@@ -1,11 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://fil706e2trux"]
+[gd_scene load_steps=4 format=3 uid="uid://fil706e2trux"]
 
-[ext_resource type="PackedScene" path="res://Scenes/Characters/PLAYER1.tscn" id="1_vonw3"]
-[ext_resource type="PackedScene" path="res://Scenes/Characters/enemy.tscn" id="2_oi3di"]
+[ext_resource type="PackedScene" uid="uid://cmkm0o1kqdu22" path="res://Scenes/Characters/PLAYER1.tscn" id="1_vonw3"]
+[ext_resource type="PackedScene" uid="uid://dperrbug58ppj" path="res://Scenes/Characters/enemy.tscn" id="2_oi3di"]
+[ext_resource type="PackedScene" uid="uid://6xpebjbdcl1x" path="res://Scenes/Menus/pause_menu.tscn" id="3_yjxcc"]
 
 [node name="Level" type="Node2D"]
 
 [node name="PLAYER1" parent="." instance=ExtResource("1_vonw3")]
+position = Vector2(973, 171)
 
 [node name="Enemy" parent="." instance=ExtResource("2_oi3di")]
 position = Vector2(285, 170)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.001
+
+[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("3_yjxcc")]
+anchors_preset = -1
+anchor_bottom = 1.006
+offset_left = 11147.999
+offset_top = 8999.999
+offset_right = 97847.99
+offset_bottom = 157348.1
