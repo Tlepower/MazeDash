@@ -23,8 +23,8 @@ func _on_resume_pressed():
 	resume()
 
 func _on_controls_pressed():
-	pass
-	#get_tree().reload_current_scene()
+	#pass
+	get_tree().change_scene_to_file("res://Scenes/Menus/control.tscn")
 
 func _on_quit_pressed():
 	get_tree().quit()
