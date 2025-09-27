@@ -1,4 +1,25 @@
-[gd_scene format=3 uid="uid://crkfitlbtdwhl"]
+[gd_scene load_steps=4 format=3 uid="uid://crkfitlbtdwhl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71mqo"]
+bg_color = Color(0.71926206, 0.56993985, 0.39602843, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlmu3"]
+bg_color = Color(0.15071034, 0.08990336, 0.0068924436, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6o43"]
+bg_color = Color(0.70291203, 0.47261566, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -29,16 +50,25 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/outline_size = 0
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
 text = "Play"
 
 [node name="Controls_Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
 text = "Controls"
 
 [node name="Shop_Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
 text = "Shop"
