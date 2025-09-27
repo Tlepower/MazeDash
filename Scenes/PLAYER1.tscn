@@ -4,15 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://dduvslolf72dj" path="res://Assets/Sprites/Player1.drawio.png" id="2_adljc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aq6ag"]
-radius = 35.22783
+radius = 36.05551
 
 [node name="PLAYER1" type="CharacterBody2D"]
 script = ExtResource("1_j4hu2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_aq6ag")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_adljc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_aq6ag")
 
 [node name="Camera2D" type="Camera2D" parent="."]
