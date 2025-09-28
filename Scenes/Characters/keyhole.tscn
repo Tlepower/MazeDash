@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvoerj5jngoo"]
+
+[ext_resource type="Texture2D" uid="uid://qsxhxyijiff1" path="res://Assets/Sprites/lessdetailedkeyhole.png" id="1_wad3e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m2ysg"]
+radius = 59.03389
+
+[node name="Keyhole" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.251)
+texture = ExtResource("1_wad3e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_m2ysg")
