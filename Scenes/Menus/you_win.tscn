@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0o5a330cxlsr"]
+[gd_scene load_steps=3 format=3 uid="uid://c0o5a330cxlsr"]
 
+[ext_resource type="Script" uid="uid://4alh50wgcjy7" path="res://you_win.gd" id="1_xne7l"]
 [ext_resource type="FontFile" uid="uid://d0klfy24g11oc" path="res://Assets/Fonts/pixellari/Pixellari.ttf" id="1_ye065"]
 
 [node name="You Win" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xne7l")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -36,3 +38,5 @@ theme_override_font_sizes/font_size = 70
 text = "You Win"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
