@@ -23,10 +23,6 @@
 scale = Vector2(0.1, 0.1)
 metadata/_edit_lock_ = true
 
-[node name="PLAYER1" parent="." instance=ExtResource("1_vonw3")]
-position = Vector2(-1343, 664)
-metadata/_edit_lock_ = true
-
 [node name="Enemy" parent="." instance=ExtResource("2_oi3di")]
 position = Vector2(-1355, 421)
 metadata/_edit_lock_ = true
@@ -121,3 +117,7 @@ scale = Vector2(2.0408163, 0.4)
 position = Vector2(-2421, -1079.5917)
 scale = Vector2(0.055467926, 0.11319985)
 texture = ExtResource("7_lhx7y")
+
+[node name="PLAYER1" parent="." instance=ExtResource("1_vonw3")]
+position = Vector2(-1343, 664.00006)
+metadata/_edit_lock_ = true
