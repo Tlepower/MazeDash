@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://fil706e2trux"]
+[gd_scene load_steps=5 format=3 uid="uid://fil706e2trux"]
 
 [ext_resource type="PackedScene" uid="uid://cmkm0o1kqdu22" path="res://Scenes/Characters/PLAYER1.tscn" id="1_vonw3"]
 [ext_resource type="PackedScene" uid="uid://dperrbug58ppj" path="res://Scenes/Characters/enemy.tscn" id="2_oi3di"]
 [ext_resource type="PackedScene" uid="uid://6xpebjbdcl1x" path="res://Scenes/Menus/pause_menu.tscn" id="3_yjxcc"]
+[ext_resource type="PackedScene" uid="uid://cqn0buum5t577" path="res://Scenes/Characters/key.tscn" id="4_lkqqh"]
 
 [node name="Level" type="Node2D"]
 
@@ -18,3 +19,6 @@ position = Vector2(530, 169)
 visible = false
 offset_top = 2.0
 offset_bottom = 2.0
+
+[node name="Key" parent="." instance=ExtResource("4_lkqqh")]
+position = Vector2(165, 165)
