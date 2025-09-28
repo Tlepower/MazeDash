@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0o5a330cxlsr"]
+
+[ext_resource type="FontFile" uid="uid://d0klfy24g11oc" path="res://Assets/Fonts/pixellari/Pixellari.ttf" id="1_ye065"]
+
+[node name="You Win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 788.0
+offset_bottom = 413.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 250.0
+offset_right = 551.0
+offset_bottom = 337.0
+theme_override_fonts/font = ExtResource("1_ye065")
+theme_override_font_sizes/font_size = 56
+text = "Back"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 110.0
+offset_right = 601.0
+offset_bottom = 206.0
+theme_override_fonts/font = ExtResource("1_ye065")
+theme_override_font_sizes/font_size = 70
+text = "You Win"
+horizontal_alignment = 1
+vertical_alignment = 1
