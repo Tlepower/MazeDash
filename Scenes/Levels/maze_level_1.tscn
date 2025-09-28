@@ -69,7 +69,6 @@ scale = Vector2(26.94148, 26.94148)
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Maze_Level_1 skeleton"]
-visible = false
 texture = ExtResource("2_4ax4n")
 metadata/_edit_lock_ = true
 

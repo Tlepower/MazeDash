@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf1gp4fcrrusf"]
+[gd_scene load_steps=4 format=3 uid="uid://cf1gp4fcrrusf"]
 
 [ext_resource type="Script" uid="uid://ce43etfypbiqd" path="res://Scripts/door.gd" id="1_43ib6"]
 [ext_resource type="Texture2D" uid="uid://ctk6yw6kd8xkf" path="res://Assets/Sprites/line_wall.png" id="1_wgujr"]
-[ext_resource type="Texture2D" uid="uid://qsxhxyijiff1" path="res://Assets/Sprites/lessdetailedkeyhole.png" id="3_xsk0p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43ib6"]
 size = Vector2(704, 30)
@@ -11,17 +10,15 @@ size = Vector2(704, 30)
 script = ExtResource("1_43ib6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(0.50001526, 0)
+rotation = 1.5707964
 scale = Vector2(1.0013661, 1)
 texture = ExtResource("1_wgujr")
 metadata/_edit_lock_ = true
 
-[node name="Keyhole" type="Sprite2D" parent="."]
-scale = Vector2(0.055467926, 0.055467926)
-texture = ExtResource("3_xsk0p")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(1.5258789e-05, 0)
+rotation = 1.5707964
 shape = SubResource("RectangleShape2D_43ib6")
 metadata/_edit_lock_ = true
 
