@@ -1,29 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ck6e6eeivd836"]
+[gd_scene load_steps=4 format=3 uid="uid://ck6e6eeivd836"]
 
 [ext_resource type="Script" uid="uid://b213wytvkj2eh" path="res://Scripts/shop.gd" id="1_edh7m"]
+[ext_resource type="FontFile" uid="uid://d0klfy24g11oc" path="res://Assets/Fonts/pixellari/Pixellari.ttf" id="2_yfesf"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfesf"]
-bg_color = Color(0.71926206, 0.56993985, 0.39602843, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_as1lr"]
-bg_color = Color(0.15071034, 0.08990336, 0.0068924436, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ii1bk"]
-bg_color = Color(0.70291203, 0.47261566, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tc8st"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edh7m"]
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -52,31 +32,21 @@ offset_left = 176.0
 offset_top = 109.0
 offset_right = 969.0
 offset_bottom = 498.0
+theme_override_fonts/font = ExtResource("2_yfesf")
 theme_override_font_sizes/font_size = 110
 text = "Coming Soon"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Back_Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -136.0
-offset_top = -160.0
-offset_right = 136.0
-offset_bottom = -64.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_vertical = 3
-theme_override_constants/outline_size = 0
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_yfesf")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_as1lr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ii1bk")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tc8st")
+layout_mode = 0
+offset_left = 119.0
+offset_top = 499.0
+offset_right = 1068.0
+offset_bottom = 600.0
+theme_override_fonts/font = ExtResource("2_yfesf")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edh7m")
 text = "Back"
 
 [connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
