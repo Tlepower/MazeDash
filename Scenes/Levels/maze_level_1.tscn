@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsqegk3bowvtc"]
+
+[ext_resource type="Texture2D" uid="uid://fdc0efdy4q68" path="res://Assets/Sprites/Backgrounds/maze_dash_level1.png" id="1_l0r20"]
+[ext_resource type="Texture2D" uid="uid://n2ranlt8nf0l" path="res://Assets/Sprites/Backgrounds/maze_dash_level1-skeleton.png" id="2_4ax4n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0r20"]
+size = Vector2(202.38309, 12.709579)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ax4n"]
+size = Vector2(202.38309, 12.709579)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2kvp"]
+size = Vector2(304.03857, 12.709579)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xftu4"]
+size = Vector2(304.03857, 12.709579)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkx7g"]
+size = Vector2(201.19995, 12.709579)
+
+[node name="Maze" type="Node2D"]
+
+[node name="Maze_Level_1" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(26.94148, 26.94148)
+texture = ExtResource("1_l0r20")
+metadata/_edit_lock_ = true
+
+[node name="Maze_Level_1 skeleton" type="CharacterBody2D" parent="."]
+scale = Vector2(26.94148, 26.94148)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Maze_Level_1 skeleton"]
+texture = ExtResource("2_4ax4n")
+metadata/_edit_lock_ = true
+
+[node name="Wall_1" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
+position = Vector2(-432.69705, 189.52959)
+shape = SubResource("RectangleShape2D_l0r20")
+
+[node name="Wall_2" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
+position = Vector2(-334.99457, 79.39431)
+shape = SubResource("RectangleShape2D_l0r20")
+
+[node name="Wall_3" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
+position = Vector2(-65.80931, 79.39431)
+shape = SubResource("RectangleShape2D_l0r20")
+
+[node name="Wall_4" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
+position = Vector2(-146.02019, -50.77672)
+shape = SubResource("RectangleShape2D_4ax4n")
+
+[node name="Wall_5" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
+position = Vector2(195.21477, -111.20398)
+shape = SubResource("RectangleShape2D_t2kvp")
+
+[node name="Wall_7" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
+position = Vector2(-95.46617, -170.10944)
+shape = SubResource("RectangleShape2D_xftu4")
+
+[node name="Wall_6" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
+position = Vector2(135.65282, 189.93019)
+shape = SubResource("RectangleShape2D_tkx7g")
