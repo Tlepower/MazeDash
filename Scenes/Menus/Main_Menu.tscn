@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://crkfitlbtdwhl"]
 
-[ext_resource type="Script" uid="uid://b6g8qd17tp0fb" path="res://Scripts/main_menu.gd" id="1_dlmu3"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_dlmu3"]
 [ext_resource type="FontFile" uid="uid://d0klfy24g11oc" path="res://Assets/Fonts/pixellari/Pixellari.ttf" id="1_n6o43"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pxni"]
@@ -93,35 +93,35 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/outline_size = 0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("1_n6o43")
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_71mqo")
 text = "Play"
-metadata/_edit_lock_ = true
 
 [node name="Controls_Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("1_n6o43")
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_n6o43")
 text = "Controls"
-metadata/_edit_lock_ = true
 
 [node name="Shop_Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("1_n6o43")
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dlmu3")
 text = "Shop"
-metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="VBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Controls_Button" to="." method="_on_controls_button_pressed"]
