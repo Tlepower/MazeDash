@@ -1,5 +1,6 @@
 extends Control
 
+
 # Called when the nore enters the scene for the first time
 func _ready():
 	pass
@@ -10,12 +11,14 @@ func _process(delta):
 
 
 func _on_play_button_pressed() -> void:
-	print("Play")
+	get_tree().change_scene_to_file("res://Scenes/Levels/level.tscn")
 
 
 func _on_controls_button_pressed() -> void:
-	print("Show Controls")
+	#get_tree().change_scene_to_file("res://Scenes/Menus/control.tscn")
+
+	Global.go_to_scene("res://Scenes/Menus/control.tscn")
 
 
 func _on_shop_button_pressed() -> void:
-	print("Shop!!")
+	get_tree().change_scene_to_file("res://Scenes/Menus/shop.tscn")
