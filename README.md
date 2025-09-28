@@ -6,7 +6,7 @@ Your character navigates around a maze and earns XP as they progress to fight en
 
 ## TODO
 **Important**
-* Add doors
+* Add doors to maze
 * Write script for connecting doors to keys
 
 Lower priority
