@@ -5,6 +5,6 @@ func _on_body_entered(body):
 	if body is PLAYER1:
 		print("detected player touching")
 		
-		queue_free()
 		
+		queue_free()
 		print("removed key")

@@ -24,7 +24,7 @@ visible = false
 offset_top = 2.0
 offset_bottom = 2.0
 
-[node name="Key" parent="." instance=ExtResource("4_lkqqh")]
+[node name="Key1" parent="." instance=ExtResource("4_lkqqh")]
 position = Vector2(-594, 645)
 
 [node name="Key2" parent="." instance=ExtResource("4_lkqqh")]
