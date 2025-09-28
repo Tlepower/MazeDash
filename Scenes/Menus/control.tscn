@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjoac6drnec2g"]
+[gd_scene load_steps=3 format=3 uid="uid://cjoac6drnec2g"]
 
 [ext_resource type="Script" uid="uid://0enrjppswnpd" path="res://Scripts/control.gd" id="1_lob7e"]
+[ext_resource type="FontFile" uid="uid://d0klfy24g11oc" path="res://Assets/Fonts/pixellari/Pixellari.ttf" id="2_0g0qj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -39,12 +40,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -218.5
-offset_top = -156.0
+offset_top = -251.5
 offset_right = 218.5
-offset_bottom = 156.0
+offset_bottom = 123.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_0g0qj")
+theme_override_font_sizes/font_size = 50
 text = "Controls
 
 W - Up

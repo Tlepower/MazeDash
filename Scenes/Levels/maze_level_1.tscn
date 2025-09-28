@@ -142,38 +142,31 @@ metadata/_edit_lock_ = true
 position = Vector2(-79.17158, 13.974729)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_msh7v")
-metadata/_edit_lock_ = true
 
 [node name="Wall_14" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
 position = Vector2(49.58896, -140.85158)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xc6lc")
-metadata/_edit_lock_ = true
 
 [node name="Wall_15" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
 position = Vector2(525.4909, -5.0665555)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_i0mw8")
-metadata/_edit_lock_ = true
 
 [node name="Wall_16a" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
 position = Vector2(-535.08575, 149.39787)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_qg0km")
-metadata/_edit_lock_ = true
 
 [node name="Wall_16b" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
 position = Vector2(-535.08575, -175.13887)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_482q5")
-metadata/_edit_lock_ = true
 
 [node name="Wall_17" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
 position = Vector2(-4.7881274, 280.16272)
 shape = SubResource("RectangleShape2D_ok04x")
-metadata/_edit_lock_ = true
 
 [node name="Wall_18" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
 position = Vector2(-4.7881274, -290.7042)
 shape = SubResource("RectangleShape2D_3lpus")
-metadata/_edit_lock_ = true
