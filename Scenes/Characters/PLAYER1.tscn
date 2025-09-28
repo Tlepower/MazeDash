@@ -17,3 +17,8 @@ visible = false
 shape = SubResource("CircleShape2D_aq6ag")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -1450
+limit_top = -760
+limit_right = 1450
+limit_bottom = 750
+editor_draw_limits = true
