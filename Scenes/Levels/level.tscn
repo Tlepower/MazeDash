@@ -15,7 +15,7 @@ scale = Vector2(0.1, 0.1)
 position = Vector2(-1343, 664)
 
 [node name="Enemy" parent="." instance=ExtResource("2_oi3di")]
-position = Vector2(530, 169)
+position = Vector2(-1355, 421)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -25,4 +25,13 @@ offset_top = 2.0
 offset_bottom = 2.0
 
 [node name="Key" parent="." instance=ExtResource("4_lkqqh")]
-position = Vector2(165, 165)
+position = Vector2(-594, 645)
+
+[node name="Key2" parent="." instance=ExtResource("4_lkqqh")]
+position = Vector2(-522, -353)
+
+[node name="Key3" parent="." instance=ExtResource("4_lkqqh")]
+position = Vector2(780, -174)
+
+[node name="Key4" parent="." instance=ExtResource("4_lkqqh")]
+position = Vector2(1295, 648)
