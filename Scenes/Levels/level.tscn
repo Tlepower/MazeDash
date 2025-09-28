@@ -114,7 +114,7 @@ rotation = 1.5707964
 scale = Vector2(2.0408163, 0.4)
 
 [node name="Keyhole5" type="Sprite2D" parent="Door5a"]
-position = Vector2(-2421, -1079.5917)
+position = Vector2(2, -310.20392)
 scale = Vector2(0.055467926, 0.11319985)
 texture = ExtResource("7_lhx7y")
 
