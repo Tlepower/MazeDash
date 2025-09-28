@@ -3,6 +3,11 @@ extends Node
 var previous_scene = null
 var is_paused: bool = false
 
+var key1_taken = false
+var key2_taken = false
+var key3_taken = false
+var key4_taken = false
+
 
 func is_level_paused(new_is_paused: bool) -> void:
 	is_paused = new_is_paused

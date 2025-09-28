@@ -1,12 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://fil706e2trux"]
+[gd_scene load_steps=12 format=3 uid="uid://fil706e2trux"]
 
 [ext_resource type="PackedScene" uid="uid://cmkm0o1kqdu22" path="res://Scenes/Characters/PLAYER1.tscn" id="1_vonw3"]
 [ext_resource type="PackedScene" uid="uid://dperrbug58ppj" path="res://Scenes/Characters/enemy.tscn" id="2_oi3di"]
 [ext_resource type="PackedScene" uid="uid://dsqegk3bowvtc" path="res://Scenes/Levels/maze_level_1.tscn" id="2_tq1so"]
 [ext_resource type="PackedScene" uid="uid://6xpebjbdcl1x" path="res://Scenes/Menus/pause_menu.tscn" id="3_yjxcc"]
 [ext_resource type="PackedScene" uid="uid://cqn0buum5t577" path="res://Scenes/Characters/key.tscn" id="4_lkqqh"]
+[ext_resource type="Script" uid="uid://wp1q0xqedauq" path="res://Scripts/key1.gd" id="6_i5435"]
 [ext_resource type="PackedScene" uid="uid://cf1gp4fcrrusf" path="res://Scenes/Levels/door.tscn" id="6_rv5g2"]
+[ext_resource type="Script" uid="uid://c33qsdcadwq7v" path="res://Scripts/key2.gd" id="7_jbixu"]
 [ext_resource type="Texture2D" uid="uid://qsxhxyijiff1" path="res://Assets/Sprites/lessdetailedkeyhole.png" id="7_lhx7y"]
+[ext_resource type="Script" uid="uid://l6g4ueiujnxv" path="res://Scripts/key3.gd" id="8_rxcld"]
+[ext_resource type="Script" uid="uid://b4hltkrdjhwin" path="res://Scripts/key4.gd" id="9_j3yal"]
 
 [node name="Level" type="Node2D"]
 
@@ -31,18 +35,22 @@ offset_bottom = 2.0
 
 [node name="Key1" parent="." instance=ExtResource("4_lkqqh")]
 position = Vector2(-594, 645)
+script = ExtResource("6_i5435")
 metadata/_edit_lock_ = true
 
 [node name="Key2" parent="." instance=ExtResource("4_lkqqh")]
 position = Vector2(-522, -353)
+script = ExtResource("7_jbixu")
 metadata/_edit_lock_ = true
 
 [node name="Key3" parent="." instance=ExtResource("4_lkqqh")]
 position = Vector2(780, -174)
+script = ExtResource("8_rxcld")
 metadata/_edit_lock_ = true
 
 [node name="Key4" parent="." instance=ExtResource("4_lkqqh")]
 position = Vector2(1295, 648)
+script = ExtResource("9_j3yal")
 metadata/_edit_lock_ = true
 
 [node name="Door1" parent="." instance=ExtResource("6_rv5g2")]
