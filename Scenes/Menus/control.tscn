@@ -54,3 +54,13 @@ D - right
 Space - Pause"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Back" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 499.0
+offset_right = 736.0
+offset_bottom = 600.0
+text = "Back"
+
+[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]
