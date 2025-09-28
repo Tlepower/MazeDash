@@ -3,10 +3,18 @@ extends Node
 var previous_scene = null
 var is_paused: bool = false
 
+# Key tracking booleanss
 var key1_taken = false
 var key2_taken = false
 var key3_taken = false
 var key4_taken = false
+
+# Door tracking booleans
+var door1_open = false
+var door2_open = false
+var door3_open = false
+var door4_open = false
+var door5_open = false
 
 
 func is_level_paused(new_is_paused: bool) -> void:
