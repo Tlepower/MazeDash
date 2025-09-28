@@ -15,23 +15,32 @@ grow_vertical = 2
 script = ExtResource("1_edh7m")
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = -1.0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
-layout_mode = 0
-offset_left = 2.0
-offset_right = 1153.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="Panel/TextureRect"]
-layout_mode = 0
-offset_left = 176.0
-offset_top = 109.0
-offset_right = 969.0
-offset_bottom = 498.0
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -55.5
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_yfesf")
 theme_override_font_sizes/font_size = 110
 text = "Coming Soon"
@@ -39,11 +48,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Back_Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 119.0
-offset_top = 499.0
-offset_right = 1068.0
-offset_bottom = 600.0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -113.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_yfesf")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/focus = SubResource("StyleBoxEmpty_edh7m")
