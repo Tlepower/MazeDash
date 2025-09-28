@@ -26,10 +26,6 @@ func testEsc():
 func _on_resume_pressed():
 	resume()
 
-func _on_controls_pressed():
-	Global.go_to_scene("res://Scenes/Menus/control.tscn")
-	#get_tree().change_scene_to_file("res://Scenes/Menus/control.tscn")
-
 func _on_quit_pressed():
 	get_tree().quit()
 

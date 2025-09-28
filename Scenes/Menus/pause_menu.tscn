@@ -87,10 +87,6 @@ text = "Quit"
 layout_mode = 2
 text = "Resume"
 
-[node name="Controls" type="Button" parent="PanelContainer2/VBoxContainer"]
-layout_mode = 2
-text = "Controls"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_sjs17")
@@ -98,4 +94,3 @@ libraries = {
 
 [connection signal="pressed" from="PanelContainer2/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="PanelContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="PanelContainer2/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
