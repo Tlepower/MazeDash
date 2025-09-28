@@ -70,9 +70,10 @@ rotation = -1.5707964
 scale = Vector2(1, 0.74)
 metadata/_edit_lock_ = true
 
-[node name="Keyhole2" type="Sprite2D" parent="."]
-position = Vector2(1150, 4.7683716e-07)
-scale = Vector2(0.055467926, 0.05546793)
+[node name="Keyhole2" type="Sprite2D" parent="Door2"]
+position = Vector2(4.7701178e-08, -16.216187)
+rotation = 1.5707964
+scale = Vector2(0.074956656, 0.05546793)
 texture = ExtResource("7_lhx7y")
 metadata/_edit_lock_ = true
 
@@ -81,9 +82,9 @@ position = Vector2(0, -615.80035)
 scale = Vector2(1, 0.49)
 metadata/_edit_lock_ = true
 
-[node name="Keyhole3" type="Sprite2D" parent="."]
-position = Vector2(0, -622.80023)
-scale = Vector2(0.055467926, 0.05546793)
+[node name="Keyhole3" type="Sprite2D" parent="Door3"]
+position = Vector2(0, -14.285522)
+scale = Vector2(0.055467926, 0.11319985)
 texture = ExtResource("7_lhx7y")
 metadata/_edit_lock_ = true
 
@@ -91,7 +92,7 @@ metadata/_edit_lock_ = true
 position = Vector2(-1446, -12)
 scale = Vector2(1, 0.5600001)
 
-[node name="Keyhole4" type="Sprite2D" parent="."]
-position = Vector2(-1446, 4.7683716e-07)
-scale = Vector2(0.055467926, 0.05546793)
+[node name="Keyhole4" type="Sprite2D" parent="Door4"]
+position = Vector2(0, 21.428566)
+scale = Vector2(0.055467926, 0.09904985)
 texture = ExtResource("7_lhx7y")
