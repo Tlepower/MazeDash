@@ -69,7 +69,7 @@ offset_top = -99.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_0g0qj")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 56
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0g0qj")
 text = "Back"
 
