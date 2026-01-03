@@ -17,7 +17,7 @@ var door4_open = false
 var door5_open = false
 
 # Game over signal
-signal game_over()
+signal game_over(player_won: bool)
 
 
 func _ready():
@@ -79,6 +79,9 @@ func reset_all_accesses():
 	door5_open = false
 
 
-func end_game():
-	go_to_scene("res://Scenes/Menus/you_win.tscn")
+func end_game(player_won: bool):
+	if player_won:
+		go_to_scene("res://Scenes/Menus/you_win.tscn")
+	else:
+		go_to_scene("res://Scenes/Menus/you_lose.tscn")
 	reset_all_accesses()
