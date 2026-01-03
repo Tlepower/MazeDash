@@ -80,13 +80,6 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 alignment = 1
 
-[node name="Quit" type="Button" parent="PanelContainer2/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_tf3q2")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tf3q2")
-text = "Quit"
-
 [node name="Resume" type="Button" parent="PanelContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_tf3q2")
@@ -94,10 +87,17 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tf3q2")
 text = "Resume"
 
+[node name="Quit" type="Button" parent="PanelContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tf3q2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tf3q2")
+text = "Quit"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_sjs17")
 }
 
-[connection signal="pressed" from="PanelContainer2/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="PanelContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PanelContainer2/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
