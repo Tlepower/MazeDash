@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dperrbug58ppj"]
+[gd_scene load_steps=5 format=3 uid="uid://dperrbug58ppj"]
 
 [ext_resource type="Script" uid="uid://cer5i1140n4p2" path="res://Scripts/enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://dfctvtnka0aaw" path="res://Assets/Sprites/Enemy.png" id="2_qi2p4"]
@@ -6,12 +6,20 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iifgy"]
 size = Vector2(72, 72)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixshx"]
+
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_4gyqm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qi2p4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
+[node name="Area2D for Enemy" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D for Enemy"]
 shape = SubResource("RectangleShape2D_iifgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ixshx")
+
+[connection signal="body_entered" from="Area2D for Enemy" to="." method="_on_area_2d_for_enemy_body_entered"]

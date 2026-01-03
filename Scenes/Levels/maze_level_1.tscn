@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://dsqegk3bowvtc"]
+[gd_scene load_steps=23 format=3 uid="uid://dsqegk3bowvtc"]
 
 [ext_resource type="Texture2D" uid="uid://fdc0efdy4q68" path="res://Assets/Sprites/Backgrounds/maze_dash_level1.png" id="1_l0r20"]
 [ext_resource type="Texture2D" uid="uid://n2ranlt8nf0l" path="res://Assets/Sprites/Backgrounds/maze_dash_level1-skeleton.png" id="2_4ax4n"]
+[ext_resource type="Script" uid="uid://dqlfv20ip6mfe" path="res://Scripts/exit.gd" id="3_4ax4n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l0r20"]
 size = Vector2(205.73293, 12.709579)
@@ -46,16 +47,19 @@ size = Vector2(49.050762, 12.709579)
 size = Vector2(574.2446, 5.4560986)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qg0km"]
-size = Vector2(265.3158, 5.4560986)
+size = Vector2(262.34637, 5.4560986)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_482q5"]
-size = Vector2(234.10002, 5.4560986)
+size = Vector2(222.48224, 5.4560986)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ok04x"]
 size = Vector2(1066.0142, 5.4560986)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3lpus"]
 size = Vector2(1066.0142, 5.4560986)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl15o"]
+size = Vector2(1186.5, 2999)
 
 [node name="Maze" type="Node2D"]
 
@@ -69,7 +73,6 @@ scale = Vector2(26.94148, 26.94148)
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Maze_Level_1 skeleton"]
-visible = false
 texture = ExtResource("2_4ax4n")
 metadata/_edit_lock_ = true
 
@@ -154,12 +157,12 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_i0mw8")
 
 [node name="Wall_16a" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
-position = Vector2(-535.08575, 149.39787)
+position = Vector2(-535.08575, 150.88258)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_qg0km")
 
 [node name="Wall_16b" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
-position = Vector2(-535.08575, -175.13887)
+position = Vector2(-535.08575, -180.94775)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_482q5")
 
@@ -170,3 +173,12 @@ shape = SubResource("RectangleShape2D_ok04x")
 [node name="Wall_18" type="CollisionShape2D" parent="Maze_Level_1 skeleton"]
 position = Vector2(-4.7881274, -290.7042)
 shape = SubResource("RectangleShape2D_3lpus")
+
+[node name="Exit" type="Area2D" parent="."]
+script = ExtResource("3_4ax4n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(-15121, -699)
+shape = SubResource("RectangleShape2D_sl15o")
+
+[connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]

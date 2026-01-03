@@ -1,37 +1,139 @@
-[gd_scene load_steps=6 format=3 uid="uid://fil706e2trux"]
+[gd_scene load_steps=17 format=3 uid="uid://fil706e2trux"]
 
 [ext_resource type="PackedScene" uid="uid://cmkm0o1kqdu22" path="res://Scenes/Characters/PLAYER1.tscn" id="1_vonw3"]
 [ext_resource type="PackedScene" uid="uid://dperrbug58ppj" path="res://Scenes/Characters/enemy.tscn" id="2_oi3di"]
 [ext_resource type="PackedScene" uid="uid://dsqegk3bowvtc" path="res://Scenes/Levels/maze_level_1.tscn" id="2_tq1so"]
 [ext_resource type="PackedScene" uid="uid://6xpebjbdcl1x" path="res://Scenes/Menus/pause_menu.tscn" id="3_yjxcc"]
 [ext_resource type="PackedScene" uid="uid://cqn0buum5t577" path="res://Scenes/Characters/key.tscn" id="4_lkqqh"]
+[ext_resource type="Script" uid="uid://wp1q0xqedauq" path="res://Scripts/key1.gd" id="6_i5435"]
+[ext_resource type="PackedScene" uid="uid://cf1gp4fcrrusf" path="res://Scenes/Levels/door.tscn" id="6_rv5g2"]
+[ext_resource type="Script" uid="uid://c33qsdcadwq7v" path="res://Scripts/key2.gd" id="7_jbixu"]
+[ext_resource type="Texture2D" uid="uid://qsxhxyijiff1" path="res://Assets/Sprites/lessdetailedkeyhole.png" id="7_lhx7y"]
+[ext_resource type="Script" uid="uid://l6g4ueiujnxv" path="res://Scripts/key3.gd" id="8_rxcld"]
+[ext_resource type="Script" uid="uid://b4hltkrdjhwin" path="res://Scripts/key4.gd" id="9_j3yal"]
+[ext_resource type="Script" uid="uid://cn0xlkc4odanb" path="res://Scripts/door1.gd" id="11_r0lyn"]
+[ext_resource type="Script" uid="uid://bkuoe0lv4um" path="res://Scripts/door2.gd" id="13_c5s4o"]
+[ext_resource type="Script" uid="uid://deixrxkhgrqxb" path="res://Scripts/door3.gd" id="14_kogc4"]
+[ext_resource type="Script" uid="uid://cows0ahlbr6xv" path="res://Scripts/door4.gd" id="15_on2c6"]
+[ext_resource type="Script" uid="uid://dsjhnptj3ufuc" path="res://Scripts/door5.gd" id="16_vn0m0"]
 
 [node name="Level" type="Node2D"]
 
 [node name="Maze" parent="." instance=ExtResource("2_tq1so")]
 scale = Vector2(0.1, 0.1)
-
-[node name="PLAYER1" parent="." instance=ExtResource("1_vonw3")]
-position = Vector2(-1343, 664)
+metadata/_edit_lock_ = true
 
 [node name="Enemy" parent="." instance=ExtResource("2_oi3di")]
 position = Vector2(-1355, 421)
+metadata/_edit_lock_ = true
+
+[node name="Key1" parent="." instance=ExtResource("4_lkqqh")]
+position = Vector2(-594, 645)
+script = ExtResource("6_i5435")
+metadata/_edit_lock_ = true
+
+[node name="Key2" parent="." instance=ExtResource("4_lkqqh")]
+position = Vector2(-522, -353)
+script = ExtResource("7_jbixu")
+metadata/_edit_lock_ = true
+
+[node name="Key3" parent="." instance=ExtResource("4_lkqqh")]
+position = Vector2(780, -174)
+script = ExtResource("8_rxcld")
+metadata/_edit_lock_ = true
+
+[node name="Key4" parent="." instance=ExtResource("4_lkqqh")]
+position = Vector2(1295, 648)
+script = ExtResource("9_j3yal")
+metadata/_edit_lock_ = true
+
+[node name="Door1" parent="." instance=ExtResource("6_rv5g2")]
+position = Vector2(84, 480)
+scale = Vector2(1, 0.8)
+script = ExtResource("11_r0lyn")
+metadata/_edit_lock_ = true
+
+[node name="Keyhole1" type="Sprite2D" parent="Door1"]
+position = Vector2(2, 86.25)
+scale = Vector2(0.055467926, 0.06933491)
+texture = ExtResource("7_lhx7y")
+metadata/_edit_lock_ = true
+
+[node name="Door2" parent="." instance=ExtResource("6_rv5g2")]
+position = Vector2(1162, 0)
+rotation = -1.5707964
+scale = Vector2(1, 0.74)
+script = ExtResource("13_c5s4o")
+metadata/_edit_lock_ = true
+
+[node name="Keyhole2" type="Sprite2D" parent="Door2"]
+position = Vector2(4.7701178e-08, -16.216187)
+rotation = 1.5707964
+scale = Vector2(0.074956656, 0.05546793)
+texture = ExtResource("7_lhx7y")
+metadata/_edit_lock_ = true
+
+[node name="Door3" parent="." instance=ExtResource("6_rv5g2")]
+position = Vector2(0, -615.80035)
+scale = Vector2(1, 0.49)
+script = ExtResource("14_kogc4")
+metadata/_edit_lock_ = true
+
+[node name="Keyhole3" type="Sprite2D" parent="Door3"]
+position = Vector2(0, -14.285522)
+scale = Vector2(0.055467926, 0.11319985)
+texture = ExtResource("7_lhx7y")
+metadata/_edit_lock_ = true
+
+[node name="Door4" parent="." instance=ExtResource("6_rv5g2")]
+position = Vector2(-1446, -12)
+scale = Vector2(1, 0.5600001)
+script = ExtResource("15_on2c6")
+metadata/_edit_lock_ = true
+
+[node name="Keyhole4" type="Sprite2D" parent="Door4"]
+position = Vector2(0, 21.428566)
+scale = Vector2(0.055467926, 0.09904985)
+texture = ExtResource("7_lhx7y")
+metadata/_edit_lock_ = true
+
+[node name="Door5a" parent="." instance=ExtResource("6_rv5g2")]
+position = Vector2(1145, 583.99994)
+scale = Vector2(1, 0.49)
+script = ExtResource("16_vn0m0")
+metadata/_edit_lock_ = true
+
+[node name="Door5a2" parent="Door5a" instance=ExtResource("6_rv5g2")]
+position = Vector2(128, -312.2447)
+rotation = 1.5707964
+scale = Vector2(2.0408163, 0.4)
+
+[node name="Keyhole5" type="Sprite2D" parent="Door5a"]
+position = Vector2(2, -310.20392)
+scale = Vector2(0.055467926, 0.11319985)
+texture = ExtResource("7_lhx7y")
+metadata/_edit_lock_ = true
+
+[node name="PLAYER1" parent="." instance=ExtResource("1_vonw3")]
+position = Vector2(-1343, 664.00006)
+metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("3_yjxcc")]
-visible = false
-offset_top = 2.0
-offset_bottom = 2.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
 
-[node name="Key" parent="." instance=ExtResource("4_lkqqh")]
-position = Vector2(-594, 645)
-
-[node name="Key2" parent="." instance=ExtResource("4_lkqqh")]
-position = Vector2(-522, -353)
-
-[node name="Key3" parent="." instance=ExtResource("4_lkqqh")]
-position = Vector2(780, -174)
-
-[node name="Key4" parent="." instance=ExtResource("4_lkqqh")]
-position = Vector2(1295, 648)
+[connection signal="key_taken" from="Key1" to="Door1" method="_on_key_taken"]
+[connection signal="key_taken" from="Key1" to="Door5a" method="_on_key_taken"]
+[connection signal="key_taken" from="Key2" to="Door2" method="_on_key_taken"]
+[connection signal="key_taken" from="Key2" to="Door5a" method="_on_key_taken"]
+[connection signal="key_taken" from="Key3" to="Door3" method="_on_key_taken"]
+[connection signal="key_taken" from="Key3" to="Door5a" method="_on_key_taken"]
+[connection signal="key_taken" from="Key4" to="Door4" method="_on_key_taken"]

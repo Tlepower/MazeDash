@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjoac6drnec2g"]
+[gd_scene load_steps=4 format=3 uid="uid://cjoac6drnec2g"]
 
 [ext_resource type="Script" uid="uid://0enrjppswnpd" path="res://Scripts/control.gd" id="1_lob7e"]
 [ext_resource type="FontFile" uid="uid://d0klfy24g11oc" path="res://Assets/Fonts/pixellari/Pixellari.ttf" id="2_0g0qj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0g0qj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -58,11 +60,17 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Back" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 451.0
-offset_top = 499.0
-offset_right = 736.0
-offset_bottom = 600.0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -99.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_0g0qj")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0g0qj")
 text = "Back"
 
 [connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]

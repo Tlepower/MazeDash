@@ -34,6 +34,7 @@ corner_radius_bottom_left = 20
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dlmu3"]
 
 [node name="Main_Menu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -93,35 +94,35 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/outline_size = 0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("1_n6o43")
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_71mqo")
 text = "Play"
-metadata/_edit_lock_ = true
 
 [node name="Controls_Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("1_n6o43")
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_n6o43")
 text = "Controls"
-metadata/_edit_lock_ = true
 
 [node name="Shop_Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("1_n6o43")
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dlmu3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_n6o43")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dlmu3")
 text = "Shop"
-metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="VBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Controls_Button" to="." method="_on_controls_button_pressed"]
