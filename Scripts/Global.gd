@@ -52,3 +52,21 @@ func go_back():
 		go_to_scene(previous_scene)
 	else:
 		print("Failed\n -- previous_scene: \"", previous_scene, "\"")
+
+## Sets all variables back to their initial values
+func reset_all_accesses():
+	#var previous_scene = null # Should leave addddddddd
+	var is_paused: bool = false
+
+	# Key tracking booleanss
+	key1_taken = false
+	key2_taken = false
+	key3_taken = false
+	key4_taken = false
+
+	# Door tracking booleans
+	door1_open = false
+	door2_open = false
+	door3_open = false
+	door4_open = false
+	door5_open = false

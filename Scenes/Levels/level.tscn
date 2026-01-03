@@ -121,3 +121,11 @@ texture = ExtResource("7_lhx7y")
 [node name="PLAYER1" parent="." instance=ExtResource("1_vonw3")]
 position = Vector2(-1343, 664.00006)
 metadata/_edit_lock_ = true
+
+[connection signal="key_taken" from="Key1" to="Door1" method="_on_key_taken"]
+[connection signal="key_taken" from="Key1" to="Door5a" method="_on_key_taken"]
+[connection signal="key_taken" from="Key2" to="Door2" method="_on_key_taken"]
+[connection signal="key_taken" from="Key2" to="Door5a" method="_on_key_taken"]
+[connection signal="key_taken" from="Key3" to="Door3" method="_on_key_taken"]
+[connection signal="key_taken" from="Key3" to="Door5a" method="_on_key_taken"]
+[connection signal="key_taken" from="Key4" to="Door4" method="_on_key_taken"]

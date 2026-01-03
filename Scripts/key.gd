@@ -4,6 +4,9 @@ class_name Key
 extends Area2D
 
 var key_id: int
+signal key_taken(key_id: int)
+
+
 func _on_body_entered(body):
 	if body is PLAYER1:
 		print("detected player touching")
@@ -24,4 +27,7 @@ func take_key():
 	elif self.key_id == 4:
 		Global.key4_taken = true
 	
+	# Send a signal for the doors to let it know that its corresponding key has been taken
+	key_taken.emit(self.key_id)
+
 	print("Key ", self.key_id, " taken")
