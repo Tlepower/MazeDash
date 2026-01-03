@@ -16,6 +16,13 @@ var door3_open = false
 var door4_open = false
 var door5_open = false
 
+# Game over signal
+signal game_over()
+
+
+func _ready():
+	game_over.connect(end_game)
+
 
 func is_level_paused(new_is_paused: bool) -> void:
 	is_paused = new_is_paused
@@ -70,3 +77,8 @@ func reset_all_accesses():
 	door3_open = false
 	door4_open = false
 	door5_open = false
+
+
+func end_game():
+	go_to_scene("res://Scenes/Menus/you_win.tscn")
+	reset_all_accesses()
