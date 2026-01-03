@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	self.visible = false
 	$AnimationPlayer.play("blur")
 
 func resume():
@@ -29,7 +30,5 @@ func _on_resume_pressed():
 func _on_quit_pressed():
 	get_tree().quit()
 
-func _process(delta):
+func _process(_delta):
 	testEsc()
-
-	

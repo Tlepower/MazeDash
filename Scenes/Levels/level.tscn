@@ -27,13 +27,6 @@ metadata/_edit_lock_ = true
 position = Vector2(-1355, 421)
 metadata/_edit_lock_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("3_yjxcc")]
-visible = false
-offset_top = 2.0
-offset_bottom = 2.0
-
 [node name="Key1" parent="." instance=ExtResource("4_lkqqh")]
 position = Vector2(-594, 645)
 script = ExtResource("6_i5435")
@@ -102,11 +95,13 @@ metadata/_edit_lock_ = true
 position = Vector2(0, 21.428566)
 scale = Vector2(0.055467926, 0.09904985)
 texture = ExtResource("7_lhx7y")
+metadata/_edit_lock_ = true
 
 [node name="Door5a" parent="." instance=ExtResource("6_rv5g2")]
 position = Vector2(1145, 583.99994)
 scale = Vector2(1, 0.49)
 script = ExtResource("16_vn0m0")
+metadata/_edit_lock_ = true
 
 [node name="Door5a2" parent="Door5a" instance=ExtResource("6_rv5g2")]
 position = Vector2(128, -312.2447)
@@ -117,9 +112,22 @@ scale = Vector2(2.0408163, 0.4)
 position = Vector2(2, -310.20392)
 scale = Vector2(0.055467926, 0.11319985)
 texture = ExtResource("7_lhx7y")
+metadata/_edit_lock_ = true
 
 [node name="PLAYER1" parent="." instance=ExtResource("1_vonw3")]
 position = Vector2(-1343, 664.00006)
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("3_yjxcc")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [connection signal="key_taken" from="Key1" to="Door1" method="_on_key_taken"]

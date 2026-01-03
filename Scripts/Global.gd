@@ -43,6 +43,7 @@ func go_to_scene(new_scene_path):
 	get_tree().change_scene_to_file(new_scene_path)
 	print("Scene changed to: \"", previous_scene, "\"\n")
 
+
 func go_back():
 	print("invoked go_back()")
 	if previous_scene != null:
@@ -59,6 +60,7 @@ func go_back():
 		go_to_scene(previous_scene)
 	else:
 		print("Failed\n -- previous_scene: \"", previous_scene, "\"")
+
 
 ## Sets all variables back to their initial values
 func reset_all_accesses():
